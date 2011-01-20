@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ 	<class name="com.sonatype.workout.model.User" table="users">
+ 	 	<id column="id" name="id" type="java.lang.Integer"/>
+ 	 	<property column="first_name" name="firstName" type="java.lang.String"/>
+ 	 	<property column="last_name" name="lastName" type="java.lang.String"/>
+<!--  <property column="USER_FIRST_NAME" name="userFirstName" type="java.lang.String"/>
+<property column="USER_EMAIL" name="userEmail" type="java.lang.String"/>
+<property column="USER_LAST_NAME" name="userLastName" type="java.lang.String"/>
+<property column="CREATION_DATE" length="4" name="creationDate" type="java.util.Date"/>
+<property column="CREATED_BY" name="createdBy" type="java.lang.Double"/>
+<property column="MODIFICATION_DATE" length="4" name="modificationDate" type="java.util.Date"/>
+<property column="MODIFIED_BY" name="modifiedBy" type="java.lang.Double"/>
+<property column="DELETE_DATE" length="4" name="deleteDate" type="java.util.Date"/>
+<property column="DELETED_BY" name="deletedBy" type="java.lang.Double"/>
+<set name="properties" lazy="true" inverse="true" cascade="all-delete-orphan">
+ 	 	 	<key column="USER_ID" />
+<one-to-many class="org.applabs.base.UserProp" />
+ 	 	</set> -->
+ 	</class>
+</hibernate-mapping>
