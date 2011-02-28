@@ -1,6 +1,10 @@
 package com.sonatype.workout.model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
+
+	private static final long serialVersionUID = -2864778747698052511L;
 
 	private Integer id;
 	private String firstName;

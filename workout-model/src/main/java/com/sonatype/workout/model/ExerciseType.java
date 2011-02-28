@@ -2,15 +2,14 @@ package com.sonatype.workout.model;
 
 import java.io.Serializable;
 
-public class Exercise implements Serializable {
-
-	private static final long serialVersionUID = 8402492244529925894L;
+public class ExerciseType implements Serializable {
+	
+	private static final long serialVersionUID = -8654938064979052758L;
 
 	private Integer id;
 	private String name;
-	private ExerciseType type;
 	
-	public Exercise() {}
+	public ExerciseType() {}
 
 	public Integer getId() {
 		return id;
@@ -20,14 +19,6 @@ public class Exercise implements Serializable {
 		this.id = id;
 	}
 
-	public ExerciseType getType() {
-		return type;
-	}
-
-	public void setType(ExerciseType type) {
-		this.type = type;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -35,6 +26,5 @@ public class Exercise implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	
 }

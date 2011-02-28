@@ -31,6 +31,20 @@
 		<constructor-arg ref="userService" />
 	</bean>
 
+	<bean name="/workout.html"
+          class="com.sonatype.workout.web.WorkoutController">
+        <property name="workoutService" ref="workoutService"/>
+        <property name="formView" value="workout"/>
+        <property name="successView" value="view-workout"/>
+        <property name="commandName" value="workout"/>
+        <property name="commandClass" value="com.sonatype.workout.web.command.WorkoutCommand"/>
+    </bean>
+
+	<bean name="/view-workout.html"
+          class="com.sonatype.workout.web.ViewWorkoutController">
+        <property name="workoutService" ref="workoutService"/>
+    </bean>
+
 	<!-- This bean sets up the Velocity environment for us based on a root path 
 		for templates. Optionally, a properties file can be specified for more control 
 		over the Velocity environment, but the defaults are pretty sane for file 
