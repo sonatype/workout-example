@@ -16,30 +16,5 @@
     <property name="password" value=""/>
   </bean>
 
-  <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
-    <property name="dataSource" ref="dataSource"/>
-    <property name="mappingResources">
-      <list>
-        <value>User.hbm.xml</value>
-      </list>
-    </property>
-    <property name="hibernateProperties">
-      <value>
-        hibernate.dialect=org.hibernate.dialect.MySQLDialect
-      </value>
-    </property>
-  </bean>
-  
-  <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
-    <property name="sessionFactory" ref="sessionFactory" />
-  </bean>
-
-  <tx:annotation-driven transaction-manager="txManager"/>
-
-  <bean id="userService" class="com.sonatype.workout.db.UserServiceDBImpl">
-    <property name="sessionFactory" ref="sessionFactory"/>
-  </bean>
-
-  <bean id="authService" class="com.sonatype.example.workout.api.AuthService"/>
 
 </beans>
