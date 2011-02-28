@@ -21,5 +21,18 @@
       <dropTable tableName="users"></dropTable>
     </rollback>
   </changeSet>
+    <changeSet id="modify_user_add_login_password" author="tobrien">
+    <comment>Adding a login and password field to the user table</comment>
+    <addColumn tableName="users">
+      <column name="login" type="varchar(255)"/>
+    </addColumn>
+    <addColumn tableName="users">
+      <column name="password" type="varbinary(32)"/>
+    </addColumn>
+    <rollback>
+		<dropColumn tableName="users" columnName="login"/>
+		<dropColumn tableName="password" columnName="password"/>
+    </rollback>
+  </changeSet>
  
 </databaseChangeLog>

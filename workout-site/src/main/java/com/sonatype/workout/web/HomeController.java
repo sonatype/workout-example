@@ -19,6 +19,6 @@ public class HomeController implements Controller {
 			HttpServletResponse response) throws ServletException, IOException {
 		logger.info("Home Controller");
 
-		return new ModelAndView("home.jsp");
+		return new ModelAndView("home");
 	}
 }
