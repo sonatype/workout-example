@@ -92,5 +92,20 @@
 			<dropTable tableName="exercises"></dropTable>
 		</rollback>	
 	</changeSet>
+	<changeSet id="insert_exercise_types" author="tobrien">
+		<comment>Inserting initial Exercise Types</comment>
+		<loadData tableName="exercise_types" file="src/main/db/ref/exercise_types.csv">
+			<column name="id" type="NUMERIC"/>
+			<column name="name" type="STRING"/>
+		</loadData>
+	</changeSet>
+	<changeSet id="insert_sample_exercises" author="tobrien">
+		<comment>Inserting initial Exercise Types</comment>
+		<loadData tableName="exercises" file="src/main/db/ref/exercises.csv">
+			<column name="id" type="NUMERIC"/>
+			<column name="name" type="STRING"/>
+			<column name="exercise_type_id" type="NUMERIC"/>
+		</loadData>
+	</changeSet>
 
 </databaseChangeLog>

@@ -4,9 +4,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	                    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
-	<bean name="/home.html" class="com.sonatype.workout.web.HomeController" />
+	<bean name="/home.s" class="com.sonatype.workout.web.HomeController" />
 
-	<bean name="/signup.html"
+	<bean name="/signup.s"
           class="com.sonatype.workout.web.SignupController">
 		<property name="authService" ref="authService"/>
 		<property name="userService" ref="userService"/>
@@ -17,7 +17,7 @@
         <property name="validator" ref="signupValidator"/>
     </bean>
 
-	<bean name="/login.html"
+	<bean name="/login.s"
           class="com.sonatype.workout.web.LoginController">
 		<property name="userService" ref="userService"/>
         <property name="formView" value="login"/>
@@ -27,11 +27,11 @@
         <property name="validator" ref="loginValidator"/>
     </bean>
 
-	<bean name="/user.html" class="com.sonatype.workout.web.UserController">
+	<bean name="/user.s" class="com.sonatype.workout.web.UserController">
 		<constructor-arg ref="userService" />
 	</bean>
 
-	<bean name="/workout.html"
+	<bean name="/workout.s"
           class="com.sonatype.workout.web.WorkoutController">
         <property name="workoutService" ref="workoutService"/>
         <property name="formView" value="workout"/>
@@ -40,7 +40,7 @@
         <property name="commandClass" value="com.sonatype.workout.web.command.WorkoutCommand"/>
     </bean>
 
-	<bean name="/view-workout.html"
+	<bean name="/view-workout.s"
           class="com.sonatype.workout.web.ViewWorkoutController">
         <property name="workoutService" ref="workoutService"/>
     </bean>

@@ -8,6 +8,5 @@
  	 		<generator class="native"/>
  	 	</id>
  	 	<property column="name" name="name" type="string"/>
- 	 	<many-to-one name="exerciseType" column="exercise_type_id" class="com.sonatype.workout.model.Exercises"/>
  	</class>
 </hibernate-mapping>
